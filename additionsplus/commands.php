@@ -12,7 +12,7 @@ $header->subtitle("Commands & Permissions")
 
 <main id="content" class="site-content" role="main">
     <section>
-        <div class="features-posts">
+        <div class="featured-posts">
             <div class="width-container">
                 <div class="cz-container">
                     <div class="cz-row">

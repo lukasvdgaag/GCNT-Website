@@ -3,15 +3,14 @@ require '/var/www/html/inc/HeaderBuilder.php';
 use inc\HeaderBuilder;
 
 $header = new HeaderBuilder("Terms of Service", "terms-of-service");
-$header->subtitle("The best Skywars plugin ever made!")
-    ->displayFeaturedPlugin(false)
+$header->displayFeaturedPlugin(false)
     ->metaDescription("Read about GCNT's Terms of Service.")
     ->build();
 ?>
 
     <main id="content" class="site-content" role="main">
         <section>
-            <div class="features-posts">
+            <div class="featured-posts">
                 <div class="cz-container">
                     <div class="cz-row cz-justify-content-center">
                         <div class="cz-col-12">

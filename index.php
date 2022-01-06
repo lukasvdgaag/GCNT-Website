@@ -16,7 +16,7 @@ $header->background(true)
 
 <main id="content" class="site-content" role="main">
     <section>
-        <div class="features-posts">
+        <div class="featured-posts">
             <div class="cz-container"><h2>Our Plugins</h2>
                 <div class="cz-row cz-justify-content-center card-wrapper">
                     <div class="cz-col-6 cz-col-md-4 cz-col-lg-4 cz-col-xl-3">
