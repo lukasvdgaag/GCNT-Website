@@ -6,8 +6,9 @@ use inc\HeaderBuilder;
 $pluginArray = array("additions", "streakrewards", "skywarsreloaded");
 $randomNum = array_rand($pluginArray);
 
-$header = new HeaderBuilder("SkyWarsReloaded", "skywars/importing-arenas");
+$header = new HeaderBuilder("GaagjesCraft Network Team", "index");
 $header->background(true)
+    ->subtitle("Professional Minecraft plugins development")
     ->displayFeaturedPlugin(true)
     ->featured($pluginArray[$randomNum])
     ->build();

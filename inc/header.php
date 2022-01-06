@@ -303,7 +303,7 @@
 
 
             <?php
-            if ($background === "true"): ?>
+            if ($background): ?>
                 <div class="simpleParallax">
                     <div class="simpleParallax cz-overflow-hidden"><img loading="lazy" alt="background image"
                                                                         src="/inc/img/background.jpg"
@@ -326,7 +326,7 @@
                 </span>
                 <br>
                 <?php
-                if ($displayFeaturedPlugin === "true"): ?>
+                if ($displayFeaturedPlugin): ?>
                     <a href="<?= $featuredLink ?>" class="cz-menu-link">
                         <span class="sticky-post page-sub cz-align-items-center cz-d-inline-flex aos-init aos-animate featured-link"
                               data-aos="zoom-in-up" data-aos-duration="800">
