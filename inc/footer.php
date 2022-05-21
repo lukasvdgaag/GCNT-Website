@@ -8,7 +8,7 @@
                     </a>
                     <div class="componentz-copyright-theme cz-text-center">
                         <a href="https://www.gcnt.net/">
-                            &copy; 2016 - 2021 </a></div>
+                            &copy; 2016 - 2022 </a></div>
                     <div class="componentz-copyright-theme cz-text-center">
                         <a href="https://www.gcnt.net/terms-of-service" class="underline">
                             terms of service

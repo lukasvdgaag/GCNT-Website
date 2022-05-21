@@ -5,15 +5,16 @@ namespace inc;
 class HeaderBuilder
 {
 
-    private $title;
-    private $subtitle = "";
-    private $displayFeaturedPlugin = false;
-    private $background = false;
-    private $featured = "additions";
+    private string $title;
+    private string $subtitle = "";
+    private bool $displayFeaturedPlugin = false;
+    private bool $background = false;
+    private string $featured = "additions";
 
-    private $metaLink;
-    private $metaDescription = "GaagjesCraft Network Team (GCNT) is dedicated to the free, premium and 
+    private string $metaLink;
+    private string $metaDescription = "GaagjesCraft Network Team (GCNT) is dedicated to the free, premium and 
 custom spigot/bukkit plugins with attention to easy usability, optimised code, and great features";
+    private array $cssLinks = [];
 
     /**
      * @param string $title Title of the web page.
@@ -23,6 +24,11 @@ custom spigot/bukkit plugins with attention to easy usability, optimised code, a
     {
         $this->title = $title;
         $this->metaLink = $metaLink;
+    }
+
+    public function addCustomCSS(string $link): HeaderBuilder {
+        $this->cssLinks[] = $link;
+        return $this;
     }
 
     public function metaDescription(string $metaDescription): HeaderBuilder {
@@ -82,6 +88,7 @@ custom spigot/bukkit plugins with attention to easy usability, optimised code, a
         $metaDescription = $this->metaDescription;
         $metaLink = $this->metaLink;
         $displayTitle = $this->getDisplayTitle();
+        $cssLinks = $this->cssLinks;
 
         require "/var/www/html/inc/header.php";
     }

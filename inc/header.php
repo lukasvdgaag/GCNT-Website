@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $displayTitle ?></title>
+
     <link rel="stylesheet" href="/inc/style.css?version=1641410946" type="text/css">
+    <?php foreach ($cssLinks as $link): ?>
+        <link rel="stylesheet" href="<?=$link?>" type="text/css">
+    <?php endforeach; ?>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <script>WebFontConfig = {google: {families: ['Lato:400,900']}};</script>

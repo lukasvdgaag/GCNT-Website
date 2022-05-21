@@ -16662,8 +16662,6 @@ button:not(#sidebar-toggler):not(.cz-navbar-toggler):not(.search-button):not(.bp
 
 button:focus, .button:focus, input[type=submit]:focus, .wp-block-button .wp-block-button__link:focus, #sidebar-toggler:focus, .woocommerce-button:focus, .woocommerce a.edit:focus, .woocommerce a.button:focus, .woocommerce a.button.alt:focus, .woocommerce input.button:focus, .woocommerce input.button.alt:focus, .woocommerce button.button:focus, .woocommerce button.button.alt:focus, .woocommerce #respond input#submit:focus, .woocommerce #respond input#submit.alt:focus, body #buddypress input[type=submit]:focus, #buddypress.buddypress-wrap input[type=button]:focus, #buddypress.buddypress-wrap input[type=submit]:focus, #buddypress.buddypress-wrap .generic-button a:not(.bp-tooltip):not(.bp-primary-action):not(.bp-secondary-action):focus, #buddypress.buddypress-wrap a.bp-title-button:focus, #buddypress.buddypress-wrap .comment-reply-link:focus, #buddypress.buddypress-wrap button:focus, #buddypress.buddypress-wrap ul.button-nav:not(.button-tabs) li a:focus {
     background-color: #1e244f;
-    -webkit-box-shadow: 0 0 0 2px #fff, 0 5px 20px #18be95;
-    box-shadow: 0 0 0 2px #fff, 0 5px 20px #18be95;
     outline: none
 }
 
@@ -18173,7 +18171,7 @@ i.fas, i.fab {
     direction: ltr;
 }
 
-.link-buttons>a {
+.link-buttons>a, link-buttons>button {
     background-color: #18be95;
     color: #fff;
     padding: 10px 10px;
@@ -18185,7 +18183,7 @@ i.fas, i.fab {
     line-break: normal;
     display: inline-block;
 }
-.link-buttons>a:hover, .link-buttons>a:focus, .link-buttons>a:active {
+.link-buttons>a:hover, link-buttons>button:hover, .link-buttons>a:focus, , link-buttons>button:focus, .link-buttons>a:active, , link-buttons>button:active {
     text-decoration:none;
     background-color: #179dbe;
     color: white !important;
