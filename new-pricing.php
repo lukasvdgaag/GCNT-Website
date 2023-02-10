@@ -32,7 +32,8 @@ $pageTitle = "Let's set up your budget!";
 if ($fromTicket) {
     include_once "/var/www/secret-files/config.php";
 
-    $exists = getSQLResults($link, "SELECT p.*, t.discord_channel_id FROM plugin_request_pricing AS p LEFT JOIN plugin_request_ticket AS t ON p.ticket = t.id WHERE p.id = ? AND p.token = ? AND p.ticket = ?", "ssi", $_GET['id'], $_GET['token'], $_GET['ticket_id']);
+    $exists = getSQLResults($link, "SELECT p.*, t.discord_channel_id FROM project_request_pricing AS p LEFT JOIN project_request_ticket AS t ON p.ticket = t.id 
+                                 WHERE p.id = ? AND p.token = ? AND p.ticket = ?", "ssi", $_GET['id'], $_GET['token'], $_GET['ticket_id']);
     if ($exists === false) {
         $fromTicket = false;
     } else {
@@ -52,7 +53,7 @@ if ($fromTicket) {
     if ($fromTicket && isset($_POST['type']) && isset($_POST['testing']) && isset($_POST['messages']) && isset($_POST['commands'])
         && isset($_POST['versions']) && isset($_POST['allow_publication'])) {
         $computed = $_POST['type'] . $_POST['testing'] . $_POST['messages'] . $_POST['commands'] . $_POST['versions'];
-        $res = getSQLResults($link, "UPDATE plugin_request_pricing SET selections = ?, allow_publication = ?, updated = TRUE WHERE id = ? AND token = ? AND ticket = ?", "sissi",
+        $res = getSQLResults($link, "UPDATE project_request_pricing SET selections = ?, allow_publication = ?, updated = TRUE WHERE id = ? AND token = ? AND ticket = ?", "sissi",
             $computed,
             $_POST['allow_publication'], $_GET['id'], $_GET['token'], $_GET['ticket_id']);
         $justUpdated = true;
